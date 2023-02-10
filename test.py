@@ -8,13 +8,12 @@ import matplotlib.pyplot as plt
 from keras.models import load_model
 import matplotlib.image as mpimg
 import urllib
-import wget
 import time
 import urllib.request
 # from PIL import Image
 
 
-def download_image(image_url):
+async def download_image(image_url):
     f = open('./test/Test.jpg','wb')
     f.write(urllib.request.urlopen(image_url).read())
     time.sleep(2)

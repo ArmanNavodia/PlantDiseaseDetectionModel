@@ -8,7 +8,6 @@ import os
 import pandas as pd
 from test import prediction,download_image
 import time
-import asyncio
 app=Flask(__name__)
 
 
@@ -20,7 +19,7 @@ async def home():
     url = data["url"]
     # print(data)
     # url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNt1OfqHEJWL6sAv6wwNnYS5_-KVE1FRHX0Oju6-IX&s'
-    img = await download_image(url)
+    await download_image(url)
 
     print(prediction())
      

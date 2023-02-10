@@ -5,3 +5,5 @@ numpy
 matplotlib
 gunicorn
 keras
+urllib
+time
